@@ -1,13 +1,15 @@
 # AwsS3Ng
-Will show how to consume and disaply data from api endpoints created in aws.
+Will show how to consume and display data from api endpoints created in aws.
 The first will be a mock service from outside aws - it will display bitcoin exchange rate.
 The second one will be with elastic beanstalk using python.
 The third one will be through api gateway.
 
 This demo is based on the following web resources:
-https://angular.io/guide/http
-https://www.techiediaries.com/angular-by-example-httpclient-get/
-https://docs.aws.amazon.com/AmazonS3/latest/dev/HostingWebsiteOnS3Setup.html#step1-create-bucket-config-as-website
+[Angular guide](https://angular.io/guide/http).
+
+[Angular data retreival from server methods](https://www.techiediaries.com/angular-by-example-httpclient-get/).
+
+[Amazon S3 static site hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HostingWebsiteOnS3Setup.html#step1-create-bucket-config-as-website).
 
 good luck!
 
