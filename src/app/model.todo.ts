@@ -1,3 +1,5 @@
+///class Todo
+// model for Todo 
 export class Todo {
     userId: number;
     id: number;

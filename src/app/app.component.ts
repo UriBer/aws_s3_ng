@@ -16,7 +16,8 @@ export class AppComponent {
   constructor(private dataservice: DataService){
     console.log('inside constructor');
   }
-  
+  ///get_my_todo()
+  // will display a to do list based on the ToDo model 
   public get_my_todo(){
     console.log('inside my to dos');
     this.dataservice.get_todo().subscribe((res : Todo[])=>{
