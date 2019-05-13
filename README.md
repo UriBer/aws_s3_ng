@@ -4,9 +4,10 @@ The first will be a mock service from outside aws - it will display bitcoin exch
 The second one will be with elastic beanstalk using python.
 The third one will be through api gateway.
 
-This demo is based on two web resources:
+This demo is based on the following web resources:
 https://angular.io/guide/http
 https://www.techiediaries.com/angular-by-example-httpclient-get/
+https://docs.aws.amazon.com/AmazonS3/latest/dev/HostingWebsiteOnS3Setup.html#step1-create-bucket-config-as-website
 
 good luck!
 
@@ -36,13 +37,22 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Upload to S3
+use [amazons3 step by step on bucket website hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HostingWebsiteOnS3Setup.html#step1-create-bucket-config-as-website). 
+remember to remove public restrictions and set bucket policy as the following example
+ {
+   "Version":"2012-10-17",
+   "Statement":[{
+ 	"Sid":"PublicReadForGetBucketObjects",
+         "Effect":"Allow",
+ 	  "Principal": "*",
+       "Action":["s3:GetObject"],
+       "Resource":["arn:aws:s3:::example-bucket/*"
+       ]
+     }
+   ]
+ }
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
